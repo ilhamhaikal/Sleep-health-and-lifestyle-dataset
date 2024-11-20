@@ -4,9 +4,10 @@ import streamlit_shadcn_ui as ui
 from func import calculate_metrics
 from visualization import create_pie_chart, create_funnel_chart, create_plot_average_by_group, create_treemap
 
+github_url = 'https://raw.githubusercontent.com/ilhamhaikal/Sleep-health-and-lifestyle-dataset/main/data/sleep_health.csv'
 # Load the data
 try:
-    df = pd.read_csv(r'D:\belajar program\Sleep health and lifestyle dataset\data\sleep_health.csv')
+     df = pd.read_csv(github_url)
 except FileNotFoundError:
     st.error("File 'data/sleep_health.csv' tidak ditemukan. Pastikan file tersebut berada di folder 'data'.")
     st.stop()
